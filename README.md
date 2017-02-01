@@ -25,7 +25,7 @@ mapping functions that can help with big data sets.
 
 
 == Testing Code ==
-run the following command:
+ - run the following command:
    - nosetests
 
 
