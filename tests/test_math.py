@@ -1,5 +1,5 @@
 from unittest import TestCase
-from code.Functions.calculator import Math
+from CODE.Functions.calculator import Math
 
 class TestMath(TestCase):
     def test_math_add_symbol(self):

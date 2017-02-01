@@ -13,7 +13,6 @@ class Weather:
 
     def get_weather(self):
 
-        print('success')
         user_api = 'e0505ad0c414329d4dae5fc6f31e7be9'  # Obtain yours form: http://openweathermap.org/
         unit = 'metric'  # For Fahrenheit use imperial, for Celsius use metric, and the default is Kelvin.
         api = 'http://api.openweathermap.org/data/2.5/weather?id='     # Search for your city ID here: http://bulk.openweathermap.org/sample/city.list.json.gz

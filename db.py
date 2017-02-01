@@ -18,7 +18,6 @@ class Database:
         """Create a table with specified number of columns"""
         c.execute('CREATE TABLE IF NOT EXISTS jokes(joke TEXT)')
 
-    create_table()
 
     def data_entry(self):
         """Enter a single data row into database"""
@@ -39,7 +38,7 @@ class Database:
     def read_from_db(self, command):
         """pull data at column where value = question"""
         try:
-            c.execute('SELECT value FROM stuffToPlot WHERE keyword = ?',(command,))  #populate cursor with value as tuple
+            c.execute('SELECT value FROM commands WHERE keyword = ?',(command,))  #populate cursor with value as tuple
             for row in c.fetchall():
                 return row
         except:
