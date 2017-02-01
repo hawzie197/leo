@@ -23,3 +23,9 @@ mapping functions that can help with big data sets.
  - webbrowser   (allows you to open web browsers)
  - speech_recognition
 
+
+== Testing Code ==
+run the following command:
+   - nosetests
+
+
