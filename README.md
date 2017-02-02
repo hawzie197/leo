@@ -29,3 +29,26 @@ mapping functions that can help with big data sets.
    - nosetests
 
 
+== Commands ==
+
+ - Initial Command
+     - Leo
+
+ - Following Commands
+     - how is the weather
+     - calculate xxx (times/divided by/ plus/ minus) xxx
+     - what's up
+     - what time is it
+     - im curious about something
+     - open browser
+     - tell me a joke
+     - do I have anything in my to-do list?
+     - add task to list
+     - remove task from list
+     - send text message
+     - update me on the news
+     - update me on sports
+
+
+
+
