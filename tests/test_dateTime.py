@@ -13,6 +13,5 @@ class TestDateTime(TestCase):
         self.assertIsNone(DT.get_time())
 
 
-
     def test_get_datetime(self):
         self.assertIsNone(DT.get_datetime())
