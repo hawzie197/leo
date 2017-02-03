@@ -87,25 +87,12 @@ def audio_loop():
 
 
 
-def text_loop():
-
-        while True:
-            logger.debug("Type Something!")
-            result = input("type something: ")
-
-            try:
-                Leo.complete_action(result) # DETERMINES what to do with command
-
-            except Exception as ex:
-                logger.error("Could not process text: %s", ex)
-
 def main():
     # Set up logger.
     FORMAT = '%(asctime)s %(filename)s:%(lineno)s [%(levelname)s] %(message)s'
     logging.basicConfig(format=FORMAT, level=logging.DEBUG)
 
     audio_loop()
-    #text_loop()
 
 if __name__ == '__main__':
     main()

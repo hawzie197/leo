@@ -28,6 +28,7 @@ days_month = {"01":"first","02":"second","03":"third",
 
 class DateTime:
 
+
     def get_date(self):
         """
         returns the current date
@@ -43,8 +44,8 @@ class DateTime:
         month = months[month]
         day_month = days_month[day_month]
 
-        date = day + ',' + month + ',' + day_month + ',' + year
-        call(["espeak", "-ven-us+m1", "-s170","Today's date is" + date])
+        date = "Today's date is" + day + ',' + month + ',' + day_month + ',' + year
+        self.speak_time(date)
 
 
     def get_time(self):
@@ -52,13 +53,15 @@ class DateTime:
         returns the the current time
         """
         hour = time.strftime('%H')
-        print(hour)
         new_hour = abs(int(hour)-12)
         current_time = time.strftime('%M')   # ex.  06:23
         if int(hour) >= 12:
-            call(["espeak", "-ven-us+m1", "-s170","It is currently " + str(new_hour) + ':' + current_time + 'P.M.'])
+            data = "It is currently " + str(new_hour) + ':' + current_time + 'P.M.'
+            self.speak_time(data)
         else:
-            call(["espeak", "-ven-us+m1", "-s170","It is currently " + str(new_hour) + ':' + current_time + 'A.M.'])
+            data = "It is currently " + str(new_hour) + ':' + current_time + 'A.M.'
+            self.speak_time(data)
+
 
     def get_datetime(self):
         """
@@ -79,4 +82,9 @@ class DateTime:
         hour = time.strftime('%H')
         hour = abs(int(hour)-12)
         current_time = time.strftime('%M')   # ex.  06:23
-        call(["espeak", "-ven-us+m1", "-s170","It is currently " + str(hour) + ':' + current_time + 'on' + date])
+        data = "It is currently " + str(hour) + ':' + current_time + 'on' + date
+        self.speak_time(data)
+
+
+    def speak_time(self, data):
+        call(["espeak", "-ven-us+m1", "-s170", data])
